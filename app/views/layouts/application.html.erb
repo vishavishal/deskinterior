@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Skpdesk</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'custom' %>
+    <%
+=begin%>
+ <%= stylesheet_link_tag 'main_layout' %> 
+<%
+=end%>
+    <%= stylesheet_link_tag 'sidebar3' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <style>
+        /* #common_right_navbar {
+            margin-left: auto;
+        }
+        .active{
+          color: red;
+        } */
+
+          #user_profile_div{
+            position: absolute;
+            bottom: 0;
+          }
+          #sidebar, #user_profile_div {
+            word-wrap: break-word;
+          }
+          #user_email_div {
+            word-wrap: break-word;
+            overflow:hidden;
+          }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $(".nav a").on("click", function() {
+          alert("Hi...00");
+          $(".nav").find(".active").removeClass("active");
+          $(this).parent().addClass("active");
+        });
+      });
+    </script>
+
+    <%# Yield all the head codes here! %>
+    <% if content_for?(:head) %>
+        <%= yield(:head) %>
+    <% end %> 
+  </head>
+
+  <body>  
+    <% if current_user %> 
+      <%= render partial: "dashboard/sidebar3" %>
+    <% else %>
+      <%= render template: "/devise/sessions/new" %>
+    <% end %>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<script>
+  function createSpace() {
+    window.location.href = 'skp:cb1@1';
+  }
+  function alertMe() {
+    alert("Small");
+    post_to_url('', {'q':'a'});
+  }
+  function getAllSpaces() {
+    window.location.href = 'skp:getSpaces@1';
+  }
+  function sendCount(input) {
+    alert("INput : "+input);
+    $.post('space/index/', {'count': '1249765'}, function(data){});
+    // post_to_url('space/index', {'count': '1249765'})
+    // $.ajax({
+    //   type: "POST",
+    //   url: 'space/index',
+    //   data: {'count': '249765'},
+    //   success: function() {},
+    //   datatype : "application/json"
+    // });
+  }
+  getAllSpaces();
+  
+</script>
+<style>
+  #create_space {
+    float: right
+  } 
+</style>
+<div class="row">
+  <div class="col-8">
+    <h1>Spaces List</h1>
+    <% @spaces.each do |space| %>
+    <% end %>
+  </div>
+  <div class="col-4">
+    <button onclick="createSpace()" class="btn btn-primary btn-lg btn-block" id="create_space" type="button" aria-pressed="true">Add Space</button>
+  </div>
+</div>
+

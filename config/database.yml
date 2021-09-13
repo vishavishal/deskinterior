@@ -1,0 +1,21 @@
+#Default user postgres
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  user: postgres
+  password: postpass
+
+development:
+  <<: *default
+  database: skpdesk_development
+
+test:
+  <<: *default
+  database: skpdesk_test
+
+production:
+  <<: *default
+  database: skpdesk_production
+  username: skpdesk
+  password: <%= ENV['SKPDESK_DATABASE_PASSWORD'] %>
