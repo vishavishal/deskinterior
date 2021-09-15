@@ -6,3 +6,15 @@
 #create_project {
   margin: 30px;
 }
+
+#user_profile_div{
+  position: absolute;
+  bottom: 0;
+}
+#sidebar, #user_profile_div {
+  word-wrap: break-word;
+}
+#user_email_div {
+  word-wrap: break-word;
+  overflow:hidden;
+}

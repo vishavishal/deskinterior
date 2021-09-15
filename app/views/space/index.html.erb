@@ -1,28 +1,5 @@
 <script>
-  function createSpace() {
-    window.location.href = 'skp:cb1@1';
-  }
-  function alertMe() {
-    alert("Small");
-    post_to_url('', {'q':'a'});
-  }
-  function getAllSpaces() {
-    window.location.href = 'skp:getSpaces@1';
-  }
-  function sendCount(input) {
-    alert("INput : "+input);
-    $.post('space/index/', {'count': '1249765'}, function(data){});
-    // post_to_url('space/index', {'count': '1249765'})
-    // $.ajax({
-    //   type: "POST",
-    //   url: 'space/index',
-    //   data: {'count': '249765'},
-    //   success: function() {},
-    //   datatype : "application/json"
-    // });
-  }
   getAllSpaces();
-  
 </script>
 <style>
   #create_space {

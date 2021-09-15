@@ -1,0 +1,15 @@
+{
+  "dialog": {
+    "display_name": "Dialog defaults",
+    "items": {
+      "width": {
+        "display_name": "Width",
+        "pvalue": 1000
+      },
+      "height": {
+        "display_name": "Height ",
+        "pvalue": 1000
+      }
+    }
+  }
+}

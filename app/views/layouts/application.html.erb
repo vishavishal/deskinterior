@@ -8,43 +8,9 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'custom' %>
-    <%
-=begin%>
- <%= stylesheet_link_tag 'main_layout' %> 
-<%
-=end%>
     <%= stylesheet_link_tag 'sidebar3' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-    <style>
-        /* #common_right_navbar {
-            margin-left: auto;
-        }
-        .active{
-          color: red;
-        } */
-
-          #user_profile_div{
-            position: absolute;
-            bottom: 0;
-          }
-          #sidebar, #user_profile_div {
-            word-wrap: break-word;
-          }
-          #user_email_div {
-            word-wrap: break-word;
-            overflow:hidden;
-          }
-    </style>
-    <script>
-      $(document).ready(function () {
-        $(".nav a").on("click", function() {
-          alert("Hi...00");
-          $(".nav").find(".active").removeClass("active");
-          $(this).parent().addClass("active");
-        });
-      });
-    </script>
+    <%= javascript_pack_tag 'application',    'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'ror_skp_bridge', 'data-turbolinks-track': 'reload' %>
 
     <%# Yield all the head codes here! %>
     <% if content_for?(:head) %>

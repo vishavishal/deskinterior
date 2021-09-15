@@ -19,6 +19,6 @@ Rails.application.routes.draw do
 
   #------------- POST requests ---------------------
   post 'project/create'
-  post 'settings/update_json' => 'settings#update_json'
+  post 'settings/display'     => 'settings#display'
   post 'space/index'          => 'space#index'
 end
